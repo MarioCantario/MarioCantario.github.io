@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Overseer — Nightfall v9</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="startup.css?v=nightfall-9">
+  <link rel="stylesheet" href="startup-3d.css?v=nightfall-9">
+  <link rel="stylesheet" href="startup-preview.css?v=nightfall-9">
+  <script src="startup.js?v=nightfall-9" defer></script>
+  <script src="startup-3d.bundle.js?v=nightfall-9" defer></script>
+  <script src="startup-preview.js?v=nightfall-9" defer></script>
+  <style>
+    body.embed-clean .startup-skip,
+    body.embed-clean .preview-toolbar { display: none !important; }
+  </style>
+</head>
+<body>
+  <div id="loadingScreen" class="loading-screen intro-pending" aria-live="polite">
+    <div class="startup-scene" aria-hidden="true"><div class="startup-trail"></div><div class="startup-car"><img src="assets/overseer-mark.svg" alt=""></div></div>
+    <div class="loading-copy"><strong class="startup-word">Overseer</strong><span>Replay coach</span></div>
+    <button class="startup-skip" type="button">Skip animation</button>
+  </div>
+  <div class="preview-toolbar" aria-label="Animation preview controls">
+    <span class="preview-version">Nightfall · v9</span>
+    <button id="replayIntro" class="preview-play" type="button" disabled>Loading car…</button>
+    <button id="pauseIntro" type="button" title="Space to pause or resume" hidden disabled>Pause</button>
+    <button id="inspectIntro" type="button" disabled>Close-up</button>
+    <button id="introSound" type="button" aria-pressed="true" disabled>Sound on</button>
+    <a href="assets/startup-credits.html">Credits</a>
+  </div>
+  <script>
+    if (new URLSearchParams(location.search).get('ui') === '0') {
+      document.body.classList.add('embed-clean');
+    }
+    let loopTimer = null;
+    window.addEventListener('overseer-intro-state', () => {
+      const intro = window.OverseerIntro;
+      if (intro && intro.state === 'ended' && !loopTimer) {
+        loopTimer = setTimeout(() => {
+          loopTimer = null;
+          intro.replay && intro.replay({ sound: false });
+        }, 1600);
+      }
+    });
+  </script>
+</body>
+</html>

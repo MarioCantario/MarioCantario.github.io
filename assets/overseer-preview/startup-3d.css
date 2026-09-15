@@ -1,0 +1,11 @@
+.loading-screen.intro-3d { background:#080a0d; display:block; }
+.loading-screen.intro-pending { background:#080a0d; }
+.intro-pending:not(.intro-static) .startup-scene,.intro-pending:not(.intro-static) .loading-copy { visibility:hidden; }
+.intro-3d .startup-scene { position:absolute; inset:0; width:100%; height:100%; }
+.intro-3d canvas { width:100%; height:100%; display:block; }
+.intro-3d .loading-copy { position:absolute; top:var(--title-y,64%); left:var(--title-x,9%); right:16px; text-align:left; pointer-events:none; }
+.intro-3d .startup-word { animation:none!important; font-size:var(--title-size,64px); line-height:1.1; letter-spacing:-.035em; opacity:1; clip-path:none; white-space:nowrap; }
+.loading-screen.intro-3d .loading-copy .startup-word>span { display:inline-block; font:inherit; color:inherit; letter-spacing:inherit; opacity:1; clip-path:inset(0 100% 0 0); will-change:clip-path; }
+.intro-3d .loading-copy>span { opacity:var(--word-opacity,0); margin-top:10px; }
+.intro-3d .loading-track { position:absolute; left:9%; top:84%; }
+@media(prefers-reduced-motion:reduce) { .intro-3d .startup-word>span { transform:none!important; } }

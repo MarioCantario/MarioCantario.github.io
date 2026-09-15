@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marius Hatland</title>
+<meta name="description" content="Marius Hatland. Vg2 IT-elev i Bergen som bygger nettsider, apper og design.">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <nav class="nav">
+    <a href="#top" class="brand">MARIUS<span class="brand-dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Åpne meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#om">Om meg</a></li>
+      <li><a href="#prosjekter">Prosjekter</a></li>
+      <li><a href="#ferdigheter">Ferdigheter</a></li>
+      <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Vg2 Informasjonsteknologi · Amalie Skram, Bergen</p>
+      <h1 class="hero-title">
+        Marius Hatland<br>
+        <span class="hero-title-accent">bygger og designer ting.</span>
+      </h1>
+      <p class="hero-lede">
+        Jeg lager nettsider, apper og verktøy, og designer dem selv, fra skisse til ferdig
+        kode. Nysgjerrig på teknologi og nettverk, og like glad i det visuelle som det
+        tekniske.
+      </p>
+      <div class="hero-actions">
+        <a href="#prosjekter" class="btn btn-primary">Se prosjektene mine</a>
+        <a href="assets/files/Marius_Hatland_CV.pdf" target="_blank" class="btn btn-ghost">Last ned CV</a>
+        <a href="#kontakt" class="btn btn-ghost">Ta kontakt</a>
+      </div>
+    </div>
+    <div class="hero-tags" aria-hidden="true">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span>
+      <span>Python</span><span>Figma</span><span>Cisco Packet Tracer</span><span>Video</span>
+    </div>
+  </section>
+
+  <!-- OM MEG -->
+  <section class="section" id="om">
+    <div class="section-inner about-grid">
+      <div class="about-text">
+        <p class="section-kicker">Om meg</p>
+        <h2 class="section-title">Nysgjerrig på teknologi, glad i å skape.</h2>
+        <p>
+          Jeg går Vg2 informasjonsteknologi på Amalie Skram i Bergen, etter Vg1 i
+          informasjonsteknologi og medieproduksjon. Setter meg fort inn i nye systemer,
+          og trives like godt med å jobbe alene som i team.
+        </p>
+        <p>
+          Det jeg liker best er å ta et prosjekt hele veien: idé, design i Figma, og til
+          slutt kode som faktisk fungerer. Har vært borti nettverksoppsett i Cisco Packet
+          Tracer, SQL-databaser, grafisk design for en lokal butikk og videoproduksjon på
+          skolen.
+        </p>
+        <p>
+          Ved siden av skolen jobber jeg som servitør og kjøkkenhjelp hos Sabrura i
+          Bergen. God trening i kundeservice og i å holde hodet kaldt når det er travelt.
+        </p>
+      </div>
+      <div class="about-facts">
+        <div class="fact-card">
+          <span class="fact-label">Utdanning</span>
+          <span class="fact-value">Vg2 IT, Amalie Skram</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label">Base</span>
+          <span class="fact-value">Bergen, Norge</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label">Jobber med</span>
+          <span class="fact-value">Kode, design, nettverk, video</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label">Språk</span>
+          <span class="fact-value">Norsk (morsmål), engelsk (flytende)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROSJEKTER -->
+  <section class="section section-alt" id="prosjekter">
+    <div class="section-inner">
+      <p class="section-kicker">Prosjekter</p>
+      <h2 class="section-title">Ting jeg har bygget og designet.</h2>
+
+      <div class="project-grid">
+
+        <!-- SPAR BØNES -->
+        <article class="project-card project-card-wide">
+          <span class="project-tag">Grafisk design · Trykk i butikk</span>
+          <h3 class="project-title">Plakater for Spar Bønes</h3>
+          <p class="project-desc">
+            Kampanjeplakater designet for Spar Bønes, faktisk hengt opp i butikken:
+            grillmat, pantelotteriet, lansering av Taco Truck-serien og et
+            granola-tilbud.
+          </p>
+          <div class="poster-gallery">
+            <button class="poster-item" data-full="assets/images/posters/grillmat.jpg">
+              <img src="assets/images/posters/grillmat.jpg" alt="Plakat: Stort utvalg av grillmat hos Spar">
+            </button>
+            <button class="poster-item" data-full="assets/images/posters/panteautomat.jpg">
+              <img src="assets/images/posters/panteautomat.jpg" alt="Plakat: Pant og gjør en forskjell, Spar panteautomat">
+            </button>
+            <button class="poster-item" data-full="assets/images/posters/tacotruck.jpg">
+              <img src="assets/images/posters/tacotruck.jpg" alt="Plakat: Nyhet Taco Truck hos Spar">
+            </button>
+            <button class="poster-item" data-full="assets/images/posters/granola.jpg">
+              <img src="assets/images/posters/granola.jpg" alt="Plakat: 30% på alle Jacobs Granola hos Spar">
+            </button>
+          </div>
+        </article>
+
+        <!-- TOPPEN / FIGMA -->
+        <article class="project-card project-card-wide" id="toppen">
+          <span class="project-tag">Figma → kode · UX/UI-design</span>
+          <h3 class="project-title">Toppen Klatresenter</h3>
+          <p class="project-desc">
+            Landingsside jeg designet i Figma for et tenkt klatresenter, fra desktop til
+            mobil. Gyldent snitt i layouten, en dempet strandpalett for kontrast, og
+            tydelige knapper for påmelding til kurs. Figma ville ikke gi meg rene
+            eksporter, så jeg bygde designet om til en fungerende side i kode i stedet.
+          </p>
+          <div class="figma-gallery" id="figmaGallery">
+            <button class="poster-item" style="aspect-ratio: 1000/966; width: 100%;" data-full="assets/images/figma/toppen-desktop.jpg">
+              <img src="assets/images/figma/toppen-desktop.jpg" alt="Toppen Klatresenter, kodet versjon av Figma-designet">
+            </button>
+          </div>
+          <ul class="project-meta">
+            <li>Responsivt design: desktop, tablet og mobil</li>
+            <li>Fargepalett og gridsystem valgt for kontrast og lesbarhet</li>
+          </ul>
+          <div class="project-links">
+            <a href="case-studies/toppen.html" target="_blank" rel="noopener">Se live-versjon ↗</a>
+          </div>
+        </article>
+
+        <!-- FRA NULL TIL KODE (ÅRBOK) -->
+        <article class="project-card project-card-wide">
+          <span class="project-tag">Skrevet, fotografert og designet av meg · Skolens årbok</span>
+          <h3 class="project-title">«Fra null til kode»</h3>
+          <p class="project-desc">
+            En artikkel om å lære seg koding, publisert i årboken på skolen. Jeg skrev
+            teksten, tok bildene og satte opp hele oppslaget selv.
+          </p>
+          <div class="poster-gallery poster-gallery-tall">
+            <button class="poster-item" data-full="assets/images/arbok/arbok_p1.jpg">
+              <img src="assets/images/arbok/arbok_p1.jpg" alt="Årbokoppslag: Fra null til kode, side 1">
+            </button>
+            <button class="poster-item" data-full="assets/images/arbok/arbok_p2.jpg">
+              <img src="assets/images/arbok/arbok_p2.jpg" alt="Årbokoppslag: Fra null til kode, side 2">
+            </button>
+          </div>
+        </article>
+
+        <!-- TEXAS BLOG -->
+        <article class="project-card">
+          <div class="poster-gallery" style="grid-template-columns: 1fr; margin-top: 0;">
+            <button class="poster-item" style="aspect-ratio: 16/10;" data-full="assets/images/misc/texas-blog.jpg">
+              <img src="assets/images/misc/texas-blog.jpg" alt="Skjermbilde av Texas-reisebloggen, forsiden">
+            </button>
+          </div>
+          <span class="project-tag">HTML &amp; CSS · Første nettside-prosjekt</span>
+          <h3 class="project-title">Texas Travel Blog</h3>
+          <p class="project-desc">
+            En flersides nettside fra et skoleprosjekt: en fiktiv reiseblogg om en
+            roadtrip gjennom Texas, med egne sider for steder, video og om-siden.
+            Bygget fra bunnen med ren HTML og CSS, ingen rammeverk.
+          </p>
+          <ul class="project-meta">
+            <li>4 sider: Home, Places, Video, About</li>
+            <li>Egen navigasjon, styling og bildegalleri</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://mariocantario.github.io/texas-blog-page/" target="_blank" rel="noopener">Se siden ↗</a>
+            &nbsp;·&nbsp;
+            <a href="https://github.com/MarioCantario/texas-blog-page" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- OVERSEER -->
+      <article class="project project-feature">
+        <div class="project-media">
+          <iframe class="project-video" src="assets/overseer-preview/intro.html?ui=0" title="Overseer sin åpningsfilm, live" loading="lazy" tabindex="-1"></iframe>
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Eget produkt, siden ved siden av skolen · Web + Windows-app</span>
+          <h3 class="project-title">Overseer</h3>
+          <p class="project-desc">
+            En Rocket League-coaching-app til Windows. Leser replayen din og sier hva du
+            bør gjøre annerledes, basert på faktisk fart, boost og tid igjen, ikke
+            gjetting. Jeg har bygget hele greia selv: Windows-appen, nettsiden på
+            coachrl.com, innlogging og betaling gjennom Clerk, og filmen over.
+          </p>
+          <ul class="project-meta">
+            <li>Next.js, Clerk (innlogging/betaling), Three.js (3D-intro)</li>
+            <li>Bilen er farget etter min egen logo, ikke en tilfeldig sportsbil</li>
+          </ul>
+          <div class="project-links">
+            <a href="case-studies/overseer.html" target="_blank" rel="noopener">Om prosjektet ↗</a>
+            &nbsp;·&nbsp;
+            <a href="https://coachrl.com" target="_blank" rel="noopener">coachrl.com ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="project-grid">
+
+        <!-- CISCO COACH -->
+        <article class="project-card">
+          <div class="project-card-icon" aria-hidden="true">⌁</div>
+          <span class="project-tag">Python · Automatisering · AI</span>
+          <h3 class="project-title">CiscoCoach</h3>
+          <p class="project-desc">
+            Et Python-verktøy som ser skjermbildet av Cisco Packet Tracer, tolker
+            oppgaven, og styrer musepeker og tastatur selv for å løse nettverksoppgaver.
+            Har en autopilot-modus, en loop-vakt som stopper seg selv ved gjentatte feil,
+            og lager automatisk en feilrapport når noe går galt.
+          </p>
+          <ul class="project-meta">
+            <li>Python, PyAutoGUI, skjermanalyse med AI</li>
+            <li>Bygget over flere versjoner (v5 → v6) med egen feilhåndtering</li>
+          </ul>
+        </article>
+
+        <!-- JULEFILM -->
+        <article class="project-card">
+          <span class="project-tag">Film · Klipp og regi</span>
+          <h3 class="project-title">Julefilm 2025</h3>
+          <p class="project-desc">
+            En kort julefilm laget på skolen. Filmet, klippet og satt sammen av meg.
+          </p>
+          <div class="video-embed" data-video-slot="julefilm">
+            <div class="video-placeholder">
+              <span>▶</span>
+              <p>Video legges til her (YouTube, ulistet)</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- NYHETSPROMO -->
+        <article class="project-card">
+          <span class="project-tag">Film · Nyhetssending</span>
+          <h3 class="project-title">Nyhetspromo</h3>
+          <p class="project-desc">
+            Promo for en skoleprodusert nyhetssending og podcast-innslag. Klipping,
+            grafikk og lyddesign.
+          </p>
+          <div class="video-embed" data-video-slot="nyhetspromo">
+            <div class="video-placeholder">
+              <span>▶</span>
+              <p>Video legges til her (YouTube, ulistet)</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FERDIGHETER -->
+  <section class="section" id="ferdigheter">
+    <div class="section-inner">
+      <p class="section-kicker">Ferdigheter</p>
+      <h2 class="section-title">Verktøy jeg bruker.</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Koding</h3>
+          <ul><li>HTML &amp; CSS</li><li>JavaScript</li><li>Python</li><li>SQL</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Nettverk</h3>
+          <ul><li>Cisco Packet Tracer</li><li>DNS-konfigurering</li><li>VLAN &amp; routing</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Design</h3>
+          <ul><li>Figma</li><li>Adobe InDesign</li><li>Adobe Photoshop</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Video</h3>
+          <ul><li>Klipping &amp; regi</li><li>After Effects</li><li>Lyddesign</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="section section-alt" id="kontakt">
+    <div class="section-inner kontakt-inner">
+      <p class="section-kicker">Kontakt</p>
+      <h2 class="section-title">La oss ta en prat.</h2>
+      <p class="kontakt-lede">Ledig for sommerjobb, praksisplass eller små oppdrag innen utvikling og design.</p>
+      <div class="kontakt-links">
+        <a href="mailto:hatlandmarius@gmail.com" class="kontakt-link">
+          <span class="kontakt-link-label">E-post</span>
+          <span class="kontakt-link-value">hatlandmarius@gmail.com</span>
+        </a>
+        <a href="tel:+4793833286" class="kontakt-link">
+          <span class="kontakt-link-label">Telefon</span>
+          <span class="kontakt-link-value">+47 938 33 286</span>
+        </a>
+        <a href="assets/files/Marius_Hatland_CV.pdf" target="_blank" class="kontakt-link">
+          <span class="kontakt-link-label">CV</span>
+          <span class="kontakt-link-value">Last ned PDF</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Marius Hatland</p>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Lukk">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

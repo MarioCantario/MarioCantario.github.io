@@ -1,0 +1,16 @@
+.preview-toolbar { position:fixed; z-index:201; left:24px; right:24px; bottom:22px; display:flex; align-items:center; flex-wrap:wrap; gap:8px; font:13px system-ui,sans-serif; color:#b7bcc4; transition:opacity .3s ease; }
+.preview-toolbar button { padding:10px 16px; color:#f4f4f5; background:#23262c; border:1px solid #41454d; border-radius:7px; font:inherit; cursor:pointer; }
+.preview-toolbar .preview-play { background:#db612d; color:#fff; border-color:#db612d; font-weight:600; }
+.preview-toolbar button:disabled { opacity:.5; cursor:wait; }
+.preview-toolbar button:focus-visible,.preview-toolbar a:focus-visible { outline:2px solid #ff9e6b; outline-offset:3px; }
+.preview-version { margin-right:12px; }
+.preview-toolbar a { margin-left:auto; color:#9399a3; font-size:11px; text-decoration:underline; }
+.preview-toolbar [hidden] { display:none; }
+/* Controls stay discoverable with pointer, keyboard focus, or on touch screens. */
+@media(hover:hover) {
+  .intro-playing .preview-toolbar { opacity:.22; }
+  .intro-playing .preview-toolbar:hover,.intro-playing .preview-toolbar:focus-within { opacity:1; }
+}
+body:has(.preview-toolbar) .startup-skip { top:20px; bottom:auto; right:24px; z-index:2; }
+@media(prefers-reduced-motion:reduce) { .preview-toolbar { transition:none; } }
+@media(max-width:550px) { .preview-toolbar { left:14px; right:14px; bottom:14px; gap:6px; } .preview-version { width:100%; } .preview-toolbar button { padding:9px 11px; } }

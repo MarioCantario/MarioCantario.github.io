@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toppen Klatresenter</title>
+<link rel="icon" type="image/png" href="../assets/images/favicon.png">
+<style>
+  :root {
+    --charcoal: #34383d;
+    --teal: #4fb3a6;
+    --teal-dark: #3a8f84;
+    --foam: #f6f5f0;
+    --stone: #d6d5d0;
+    --navy: #2b4356;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font); background: var(--foam); color: var(--charcoal); }
+  img { max-width: 100%; display: block; }
+
+  .case-banner {
+    background: var(--navy);
+    color: var(--foam);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 0.82rem;
+  }
+  .case-banner a { color: var(--teal); }
+
+  header.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 28px;
+    background: var(--stone);
+  }
+  .logo { display: flex; align-items: center; gap: 8px; font-weight: 700; letter-spacing: 0.06em; font-size: 1rem; }
+  .logo-icon {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--teal); color: white; display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem;
+  }
+  .nav-link { font-size: 0.78rem; letter-spacing: 0.04em; color: var(--charcoal); text-decoration: none; font-weight: 600; }
+
+  .hero {
+    position: relative;
+    padding: 64px 28px 72px;
+    background:
+      radial-gradient(circle at 22% 28%, rgba(255,255,255,0.14) 0 5px, transparent 6px),
+      radial-gradient(circle at 58% 52%, rgba(255,255,255,0.10) 0 8px, transparent 9px),
+      radial-gradient(circle at 78% 22%, rgba(255,255,255,0.14) 0 4px, transparent 5px),
+      radial-gradient(circle at 38% 78%, rgba(255,255,255,0.10) 0 6px, transparent 7px),
+      radial-gradient(circle at 88% 68%, rgba(255,255,255,0.14) 0 5px, transparent 6px),
+      radial-gradient(circle at 12% 72%, rgba(255,255,255,0.10) 0 7px, transparent 8px),
+      radial-gradient(circle at 68% 85%, rgba(255,255,255,0.12) 0 5px, transparent 6px),
+      linear-gradient(155deg, #7a5a2e 0%, #4a4530 28%, #2e3d3d 55%, #1c2b30 78%, #17242a 100%);
+    color: var(--foam);
+    text-align: center;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(20,25,26,0.75) 0%, rgba(20,25,26,0.15) 45%, rgba(20,25,26,0.35) 100%);
+    pointer-events: none;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  .hero h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: 0 0 16px; }
+  .hero p { max-width: 520px; margin: 0 auto 28px; color: #d8d7d2; font-size: 0.98rem; line-height: 1.6; }
+  .btn-teal {
+    display: inline-block;
+    background: var(--teal);
+    color: #12302c;
+    font-weight: 700;
+    padding: 13px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-teal:hover { background: var(--teal-dark); color: white; }
+
+  .why {
+    padding: 56px 28px;
+    text-align: center;
+  }
+  .why h2 {
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    color: var(--navy);
+    margin: 0 0 36px;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .why-card {
+    background: var(--stone);
+    border-radius: 8px;
+    padding: 22px 18px;
+    text-align: left;
+  }
+  .why-card h3 {
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 10px;
+  }
+  .why-card p { font-size: 0.86rem; color: #4a4d51; margin: 0; line-height: 1.55; }
+
+  .signup {
+    background: var(--navy);
+    color: var(--foam);
+    padding: 56px 28px;
+    text-align: center;
+  }
+  .signup h2 { font-size: 1.3rem; margin: 0 0 28px; }
+  .signup form {
+    max-width: 360px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+  }
+  .signup label { font-size: 0.78rem; color: #b9c6cf; }
+  .signup input {
+    margin-top: 6px;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #3f5a6c;
+    background: #223648;
+    color: var(--foam);
+    font-size: 0.9rem;
+  }
+  .signup .btn-teal { margin-top: 6px; width: 100%; }
+
+  footer {
+    background: #1c2c38;
+    color: #8ea0ac;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 640px) {
+    .why-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="case-banner">
+  Figma-design av Marius Hatland, bygget om til en ekte side i kode siden Figma ikke ville eksportere.
+  <a href="../index.html#toppen">Tilbake til porteføljen</a>
+</div>
+
+<header class="nav">
+  <div class="logo">TOPPEN</div>
+  <a href="#hvorfor" class="nav-link">HVORFOR KLATRING</a>
+</header>
+
+<section class="hero">
+  <h1>Nå din topp</h1>
+  <p>Klatring er mer enn en sport – det er en utfordring, et fellesskap og en
+     opplevelse. Bli med på kurs og oppdag styrken du ikke visste du hadde.</p>
+  <a href="#pamelding" class="btn-teal">Meld deg på kurset!</a>
+</section>
+
+<section class="why" id="hvorfor">
+  <h2>HVORFOR KLATRING</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <h3>Fysisk og mental styrke</h3>
+      <p>Bygg funksjonell styrke i hele kroppen samtidig som du trener fokus,
+         problemløsning og mental utholdenhet.</p>
+    </div>
+    <div class="why-card">
+      <h3>Fellesskap</h3>
+      <p>Bli en del av et inkluderende og støttende miljø hvor alle heier på
+         hverandre, uansett nivå.</p>
+    </div>
+    <div class="why-card">
+      <h3>Opplevelser</h3>
+      <p>Ta med deg ferdighetene ut i naturen og opplev fjellet og klippene på
+         en helt ny måte.</p>
+    </div>
+  </div>
+</section>
+
+<section class="signup" id="pamelding">
+  <h2>Klar for en utfordring? Meld deg på nå!</h2>
+  <form onsubmit="return false;">
+    <label>Fullt navn<input type="text" placeholder=""></label>
+    <label>E-post adresse<input type="email" placeholder=""></label>
+    <label>Velg kursdato<input type="date"></label>
+    <button type="submit" class="btn-teal">Send påmelding</button>
+  </form>
+</section>
+
+<footer>© 2025 Klatresenter Toppen</footer>
+
+</body>
+</html>

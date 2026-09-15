@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overseer</title>
+<meta name="description" content="Overseer, en Rocket League-coaching-app til Windows bygget av Marius Hatland.">
+<link rel="icon" type="image/png" href="../assets/images/favicon.png">
+<style>
+  :root {
+    --bg: #0b0b0d;
+    --surface: #17171b;
+    --border: #2a2a30;
+    --text: #f4f3ef;
+    --text-dim: #a8a7ae;
+    --accent: #fd4f0d;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent); }
+
+  .case-banner {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    color: var(--text-dim);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 0.82rem;
+  }
+
+  .hero-media {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    overflow: hidden;
+  }
+  .hero-media iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  .tag {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin: 10px 0 24px;
+  }
+  h2 {
+    font-size: 1.1rem;
+    margin: 40px 0 14px;
+    color: var(--accent);
+  }
+  p { color: var(--text-dim); margin: 0 0 14px; font-size: 1rem; }
+  ul { color: var(--text-dim); padding-left: 20px; margin: 0 0 14px; }
+  li { margin-bottom: 6px; }
+
+  .cta-row {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+  }
+  .btn-primary { background: var(--accent); color: #0b0b0d; }
+  .btn-ghost { border: 1px solid var(--border); color: var(--text); }
+</style>
+</head>
+<body>
+
+<div class="case-banner">
+  <a href="../index.html#prosjekter">Tilbake til porteføljen</a>
+</div>
+
+<div class="hero-media">
+  <iframe src="../assets/overseer-preview/intro.html" title="Overseer sin åpningsfilm, live og interaktiv" loading="lazy"></iframe>
+</div>
+
+<main>
+  <span class="tag">Eget produkt · coachrl.com</span>
+  <h1>Overseer</h1>
+
+  <p>
+    Overseer er en coaching-app for Rocket League, laget for Windows. Du spiller,
+    lagrer replayen, og appen forteller deg hva du faktisk gjorde feil: farten din,
+    boost-bruken, og om du rakk fram i tide. Ikke synsing, bare tall fra kampen.
+  </p>
+
+  <h2>Hva jeg bygde</h2>
+  <ul>
+    <li>Windows-appen som leser replay-filer og regner ut coaching</li>
+    <li>Nettsiden på coachrl.com, bygget i Next.js</li>
+    <li>Innlogging og betaling gjennom Clerk</li>
+    <li>Hele åpningsfilmen over, bygget i Three.js</li>
+  </ul>
+
+  <h2>Åpningsfilmen</h2>
+  <p>
+    Bilen er min egen designet form, ikke en importert bilmodell, i en farge hentet
+    rett fra logoen min. Den kjører inn, slår på lysene, passerer tett forbi kameraet,
+    og ordet OVERSEER dukker fram bokstav for bokstav bak den bakre støtfangeren idet
+    den kjører videre. Hver del av bevegelsen er justert for hånd, ikke autogenerert.
+  </p>
+
+  <h2>Stack</h2>
+  <ul>
+    <li>Next.js for nettsiden</li>
+    <li>Clerk for innlogging og abonnement</li>
+    <li>Three.js for 3D-scenen og animasjonen</li>
+  </ul>
+
+  <div class="cta-row">
+    <a href="https://coachrl.com" target="_blank" rel="noopener" class="btn btn-primary">Åpne coachrl.com</a>
+    <a href="../index.html#prosjekter" class="btn btn-ghost">Tilbake til porteføljen</a>
+  </div>
+</main>
+
+</body>
+</html>

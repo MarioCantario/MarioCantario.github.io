@@ -1,0 +1,12 @@
+{
+  "duration": 8.4,
+  "sampleRate": 32000,
+  "peak": 0.78,
+  "rms": 0.11883233981014127,
+  "sources": [
+    "43705",
+    "90069",
+    "7154"
+  ],
+  "noSynthesizedAudio": true
+}
