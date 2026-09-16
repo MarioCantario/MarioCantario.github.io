@@ -31,3 +31,39 @@ function closeLightbox() {
 lightboxClose.addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// Accent color picker
+const colorPicker = document.getElementById('colorPicker');
+const colorToggle = document.getElementById('colorToggle');
+const colorOptions = document.getElementById('colorOptions');
+const DEFAULT_ACCENT = '#3b82f6';
+
+function applyAccent(hex, save) {
+  document.documentElement.style.setProperty('--accent', hex);
+  colorOptions.querySelectorAll('.color-dot').forEach(dot => {
+    dot.classList.toggle('is-active', dot.dataset.color.toLowerCase() === hex.toLowerCase());
+  });
+  if (save) {
+    try { localStorage.setItem('accent-color', hex); } catch { /* private mode, ignore */ }
+  }
+}
+
+let savedAccent = null;
+try { savedAccent = localStorage.getItem('accent-color'); } catch { /* private mode, ignore */ }
+applyAccent(savedAccent || DEFAULT_ACCENT, false);
+
+colorToggle.addEventListener('click', () => {
+  const open = colorPicker.classList.toggle('is-open');
+  colorToggle.setAttribute('aria-expanded', open);
+});
+
+colorOptions.querySelectorAll('.color-dot').forEach(dot => {
+  dot.addEventListener('click', () => applyAccent(dot.dataset.color, true));
+});
+
+document.addEventListener('click', e => {
+  if (!colorPicker.contains(e.target)) {
+    colorPicker.classList.remove('is-open');
+    colorToggle.setAttribute('aria-expanded', 'false');
+  }
+});
