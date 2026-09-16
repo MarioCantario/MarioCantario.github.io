@@ -367,28 +367,16 @@ a { color: inherit; text-decoration: none; }
 .poster-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
 .poster-item:hover img { transform: scale(1.05); }
 
-/* Video embed placeholder */
+/* Self-hosted video */
 .video-embed {
   margin: 18px 0;
   aspect-ratio: 16 / 9;
   border-radius: 10px;
   overflow: hidden;
-  background: var(--surface-2);
+  background: #000;
   border: 1px solid var(--border);
 }
-.video-embed iframe { width: 100%; height: 100%; border: 0; }
-.video-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: var(--text-faint);
-}
-.video-placeholder span { font-size: 1.6rem; color: var(--accent); }
-.video-placeholder p { font-size: 0.82rem; margin: 0; }
+.video-embed video { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
 
 /* ---------- Skills ---------- */
 .skills-grid {
