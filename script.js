@@ -38,11 +38,16 @@ const colorToggle = document.getElementById('colorToggle');
 const colorOptions = document.getElementById('colorOptions');
 const DEFAULT_ACCENT = '#3b82f6';
 
+const githubChart = document.getElementById('githubChart');
+
 function applyAccent(hex, save) {
   document.documentElement.style.setProperty('--accent', hex);
   colorOptions.querySelectorAll('.color-dot').forEach(dot => {
     dot.classList.toggle('is-active', dot.dataset.color.toLowerCase() === hex.toLowerCase());
   });
+  if (githubChart) {
+    githubChart.src = `https://ghchart.rshah.org/${hex.replace('#', '')}/MarioCantario`;
+  }
   if (save) {
     try { localStorage.setItem('accent-color', hex); } catch { /* private mode, ignore */ }
   }
@@ -67,3 +72,19 @@ document.addEventListener('click', e => {
     colorToggle.setAttribute('aria-expanded', 'false');
   }
 });
+
+// Scroll-reveal for project cards
+const revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && revealEls.length) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('is-visible'), i * 60);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('is-visible'));
+}

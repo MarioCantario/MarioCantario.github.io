@@ -6,10 +6,24 @@
 <title>Marius Hatland</title>
 <meta name="description" content="Marius Hatland. Vg2 IT-elev i Bergen som bygger nettsider, apper og design.">
 <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mariushatland.no/">
+<meta property="og:title" content="Marius Hatland">
+<meta property="og:description" content="Vg2 IT-elev i Bergen som bygger nettsider, apper og design, fra Figma-skisse til ferdig kode.">
+<meta property="og:image" content="https://mariushatland.no/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marius Hatland">
+<meta name="twitter:description" content="Vg2 IT-elev i Bergen som bygger nettsider, apper og design, fra Figma-skisse til ferdig kode.">
+<meta name="twitter:image" content="https://mariushatland.no/assets/images/og-image.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -117,7 +131,7 @@
       <div class="project-grid">
 
         <!-- SPAR BØNES -->
-        <article class="project-card project-card-wide">
+        <article class="project-card project-card-wide reveal">
           <span class="project-tag">Grafisk design · Trykk i butikk</span>
           <h3 class="project-title">Plakater for Spar Bønes</h3>
           <p class="project-desc">
@@ -142,7 +156,7 @@
         </article>
 
         <!-- TOPPEN / FIGMA -->
-        <article class="project-card project-card-wide" id="toppen">
+        <article class="project-card project-card-wide reveal" id="toppen">
           <span class="project-tag">Figma · UX/UI-design</span>
           <h3 class="project-title">Toppen Klatresenter</h3>
           <p class="project-desc">
@@ -165,7 +179,7 @@
         </article>
 
         <!-- FRA NULL TIL KODE (ÅRBOK) -->
-        <article class="project-card project-card-wide">
+        <article class="project-card project-card-wide reveal">
           <span class="project-tag">Skrevet, fotografert og designet av meg · Skolens årbok</span>
           <h3 class="project-title">«Fra null til kode»</h3>
           <p class="project-desc">
@@ -183,7 +197,7 @@
         </article>
 
         <!-- TEXAS BLOG -->
-        <article class="project-card">
+        <article class="project-card reveal">
           <div class="poster-gallery" style="grid-template-columns: 1fr; margin-top: 0;">
             <button class="poster-item" style="aspect-ratio: 16/10;" data-full="assets/images/misc/texas-blog.jpg">
               <img src="assets/images/misc/texas-blog.jpg" alt="Skjermbilde av Texas-reisebloggen, forsiden">
@@ -210,7 +224,7 @@
       </div>
 
       <!-- OVERSEER -->
-      <article class="project project-feature">
+      <article class="project project-feature reveal">
         <div class="project-media">
           <iframe class="project-video" src="assets/overseer-preview/intro.html?ui=0" title="Overseer sin åpningsfilm, live" loading="lazy" tabindex="-1"></iframe>
         </div>
@@ -238,7 +252,7 @@
       <div class="project-grid">
 
         <!-- JULEFILM -->
-        <article class="project-card">
+        <article class="project-card reveal">
           <span class="project-tag">Film · Klipp og regi</span>
           <h3 class="project-title">Julefilm 2025</h3>
           <p class="project-desc">
@@ -252,7 +266,7 @@
         </article>
 
         <!-- NYHETSPROMO -->
-        <article class="project-card">
+        <article class="project-card reveal">
           <span class="project-tag">Film · Nyhetssending</span>
           <h3 class="project-title">Nyhetspromo</h3>
           <p class="project-desc">
@@ -267,7 +281,7 @@
         </article>
 
         <!-- CISCO COACH -->
-        <article class="project-card">
+        <article class="project-card reveal">
           <div class="project-card-icon" aria-hidden="true">⌁</div>
           <span class="project-tag">Python · Automatisering · AI</span>
           <h3 class="project-title">CiscoCoach</h3>
@@ -308,6 +322,23 @@
         <div class="skill-group">
           <h3>Video</h3>
           <ul><li>Klipping &amp; regi</li><li>After Effects</li><li>Lyddesign</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GITHUB AKTIVITET -->
+  <section class="section section-alt" id="github">
+    <div class="section-inner">
+      <p class="section-kicker">Live fra GitHub</p>
+      <h2 class="section-title">Det jeg faktisk har kodet det siste året.</h2>
+      <div class="github-card reveal">
+        <div class="github-card-head">
+          <span class="github-card-user">@MarioCantario</span>
+          <a href="https://github.com/MarioCantario" target="_blank" rel="noopener">Se profilen ↗</a>
+        </div>
+        <div class="github-chart-wrap">
+          <img id="githubChart" src="" alt="GitHub-bidragsgraf for MarioCantario, oppdateres live" width="722" height="112" loading="lazy">
         </div>
       </div>
     </div>

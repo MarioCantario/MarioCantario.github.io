@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fant ikke siden</title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0b0d;
+    --text: #f4f3ef;
+    --text-dim: #a8a7ae;
+    --border: #2a2a30;
+    --accent: #3b82f6;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+  }
+  .code {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(4rem, 18vw, 7rem);
+    line-height: 1;
+    margin: 0 0 8px;
+    color: var(--accent);
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.3rem, 4vw, 1.7rem);
+    margin: 0 0 12px;
+  }
+  p {
+    color: var(--text-dim);
+    max-width: 46ch;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+  }
+  a {
+    display: inline-block;
+    background: var(--accent);
+    color: #0b0b0d;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 26px;
+    border-radius: 100px;
+    text-decoration: none;
+  }
+  a:hover { filter: brightness(1.15); }
+</style>
+</head>
+<body>
+  <div>
+    <p class="code">404</p>
+    <h1>Denne siden finnes ikke.</h1>
+    <p>Enten en feil lenke, eller noe jeg har flyttet på. Prosjektene og resten av porteføljen ligger fortsatt på forsiden.</p>
+    <a href="/">Tilbake til forsiden</a>
+  </div>
+</body>
+</html>
